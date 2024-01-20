@@ -10,44 +10,26 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GHO"
+        android:text="Your Tokens"
         android:textAlignment="center"
-        android:textSize="80sp"
+        android:textSize="40sp"
         android:textColor="@color/font_color"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:fontFamily="@font/candylaneregular"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="20dp"
         />
-
-    <TextView
-        android:id="@+id/balance"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/tokens"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="balance"
-        android:textAlignment="center"
-        android:textSize="40sp"
-        android:textColor="@color/font_color"
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:fontFamily="@font/candylaneregular"
-        android:layout_marginTop="20dp"
-        />
-    <TextView
-        android:id="@+id/information_about_coin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="description"
-        android:textAlignment="center"
-        android:textSize="40sp"
-        android:textColor="@color/font_color"
-        app:layout_constraintTop_toBottomOf="@id/balance"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:fontFamily="@font/candylaneregular"
-        android:layout_marginTop="20dp"
-        />
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
