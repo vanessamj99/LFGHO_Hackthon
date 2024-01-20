@@ -1,12 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+
+    <ImageView
+        android:id="@+id/crypto_image"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/cryptocurrency_picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="140dp" />
 
     <TextView
         android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to your Wallet"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textColor="@color/font_color"
+        app:layout_constraintTop_toBottomOf="@id/crypto_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/candylaneregular"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <EditText
+        android:id="@+id/wallet_address_input"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Welcome to your GHO Wallet"/>
-</LinearLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:hint="Enter You Wallet Address"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_border"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="@color/font_color"
+        android:fontFamily="@font/candylaneregular"
+        android:textColor="@color/font_color"
+        />
+
+    <EditText
+        android:id="@+id/private_key_input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wallet_address_input"
+        android:hint="Enter You Private Key"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="@drawable/edit_border"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="@color/font_color"
+        android:fontFamily="@font/candylaneregular"
+        android:textColor="@color/font_color"
+        />
+    <Button
+        android:id="@+id/enter_wallet_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/right_arrow"
+        app:layout_constraintTop_toBottomOf="@+id/private_key_input"
+        app:layout_constraintStart_toStartOf="@id/private_key_input"
+        app:layout_constraintEnd_toEndOf="@id/private_key_input"
+        android:layout_marginTop="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
