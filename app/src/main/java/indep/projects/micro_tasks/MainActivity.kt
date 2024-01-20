@@ -43,7 +43,7 @@ class MainActivity : ComponentActivity() {
 
     private fun handleWalletInfo(privateKey: String, address: String){
         // Your Ethereum account private key
-//        val privateKey = "df765cea3f493f30022a8d87966001701159711a1b9444dfef4dd07920e60a82"
+//        val privateKey = "private-key"
         credentials = Credentials.create(privateKey)
         // Define the gas provider
         gasProvider = DefaultGasProvider()
