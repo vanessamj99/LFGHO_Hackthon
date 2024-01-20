@@ -25,12 +25,12 @@ class MainActivity : ComponentActivity() {
     private lateinit var web3j: Web3j
     private lateinit var credentials: Credentials
     private lateinit var gasProvider: DefaultGasProvider
-    private val myMap = mutableMapOf<String,String>()
+    val myMap = mutableMapOf<String,String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        myMap["address"] = "private_key"
+        myMap["0xab83E0071A4894Ce5464378de41cd9eC8A2037fB"] = "private_key"
         val enterButton: Button = findViewById(R.id.enter_wallet_button)
         enterButton.setOnClickListener{
             val editTextPrivateKey: EditText = findViewById(R.id.private_key_input)
@@ -41,28 +41,28 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun handleWalletInfo(privateKey: String, address: String) {
+    private fun handleWalletInfo(privateKey: String, address: String){
         // Your Ethereum account private key
 //        val privateKey = "df765cea3f493f30022a8d87966001701159711a1b9444dfef4dd07920e60a82"
-        credentials = Credentials.create("df765cea3f493f30022a8d87966001701159711a1b9444dfef4dd07920e60a82")
+        credentials = Credentials.create(privateKey)
         // Define the gas provider
         gasProvider = DefaultGasProvider()
         // Initialize the Web3j service
         web3j = Web3j.build(HttpService("https://sepolia.infura.io/v3/be42d95bb60642ee9c8d0dc13770b31e"))
         // Address you are checking for
 //        val address = "0xab83E0071A4894Ce5464378de41cd9eC8A2037fB"
-        val balance = getTokenBalance("0xab83E0071A4894Ce5464378de41cd9eC8A2037fB")
+        val balance = getTokenBalance(address)
         println("Balance: $balance")
         if(myMap[address] == privateKey){
             val tokenInformationIntent = Intent(this,TokenInformation::class.java)
             startActivity(tokenInformationIntent)
         }
         else{
-            Toast.makeText(this,"We could not find that wallet",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"We do not have that wallet on file",Toast.LENGTH_SHORT).show()
         }
     }
 
-    fun getTokenBalance(address: String): BigInteger {
+    private fun getTokenBalance(address: String): BigInteger {
         // Contract of specific coin/token
         val contractAddress = "0xc4bF5CbDaBE595361438F8c6a187bDc330539c60"
         val function = Function(

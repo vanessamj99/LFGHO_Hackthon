@@ -26,7 +26,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".TokenInformation"/>
-        <activity android:name=".IndividualToken"/>
     </application>
 
 </manifest>
