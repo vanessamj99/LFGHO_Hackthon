@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
 
     private fun handleWalletInfo(privateKey: String, address: String) {
         // Your Ethereum account private key
-        credentials = Credentials.create("private-key")
+        credentials = Credentials.create("df765cea3f493f30022a8d87966001701159711a1b9444dfef4dd07920e60a82")
         // Define the gas provider
         gasProvider = DefaultGasProvider()
         // Initialize the Web3j service
