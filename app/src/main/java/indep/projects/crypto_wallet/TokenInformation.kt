@@ -1,4 +1,4 @@
-package indep.projects.micro_tasks
+package indep.projects.crypto_wallet
 import android.content.Intent
 import android.os.Bundle
 import android.util.TypedValue

@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "indep.projects.micro_tasks"
+    namespace = "indep.projects.crypto_wallet"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "indep.projects.micro_tasks"
+        applicationId = "indep.projects.crypto_wallet"
         minSdk = 33
         targetSdk = 33
         versionCode = 1

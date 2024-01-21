@@ -1,4 +1,4 @@
-package indep.projects.micro_tasks
+package indep.projects.crypto_wallet
 
 import org.junit.Test
 

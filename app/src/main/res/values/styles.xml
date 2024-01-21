@@ -7,7 +7,7 @@
         <item name="colorAccent">@color/purple_shade</item>
     </style>
 
-    <style name="Theme.Micro_Tasks" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.Crypto_Wallet" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimaryDark">#000000</item>
     </style>
 </resources>

@@ -1,4 +1,4 @@
-package indep.projects.micro_tasks.ui.theme
+package indep.projects.crypto_wallet.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
