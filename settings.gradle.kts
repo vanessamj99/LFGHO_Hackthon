@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Micro_Tasks"
+rootProject.name = "Crypto_Wallet"
 include(":app")

@@ -50,11 +50,11 @@ class TokenInformation : ComponentActivity() {
             button.layoutParams = params
             button.typeface = fontTypeFace
             button.setOnClickListener{
-                val intent = Intent(this, IndividualToken::class.java)
-                intent.putExtra("button_text", button.text.toString())
-                intent.putExtra("balance", handleWalletInfo("","0xab83E0071A4894Ce5464378de41cd9eC8A2037fB", button.text.toString()).toString())
-                intent.putExtra("description",descriptions[button.text.toString()])
-                startActivity(intent)
+                val individualTokenIntent = Intent(this, IndividualToken::class.java)
+                individualTokenIntent.putExtra("button_text", button.text.toString())
+                individualTokenIntent.putExtra("balance", handleWalletInfo("df765cea3f493f30022a8d87966001701159711a1b9444dfef4dd07920e60a82","0xab83E0071A4894Ce5464378de41cd9eC8A2037fB", button.text.toString()).toString())
+                individualTokenIntent.putExtra("description",descriptions[button.text.toString()])
+                startActivity(individualTokenIntent)
             }
             tokensLayout.addView(button)
         }

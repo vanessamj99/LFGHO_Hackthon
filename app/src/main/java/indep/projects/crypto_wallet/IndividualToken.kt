@@ -11,7 +11,7 @@ class IndividualToken : ComponentActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.token_information)
         val balanceTextView = findViewById<TextView>(R.id.balance)
-        balanceTextView.text = "Balance: ${intent.getStringExtra("balance")} coins"
+        balanceTextView.text = "Balance: ${intent.getStringExtra("balance")}"
 
         val tokenTextView = findViewById<TextView>(R.id.title)
         tokenTextView.text = intent.getStringExtra("button_text")
