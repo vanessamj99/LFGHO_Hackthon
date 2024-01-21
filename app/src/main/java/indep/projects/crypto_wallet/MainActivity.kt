@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        myMap["0xab83E0071A4894Ce5464378de41cd9eC8A2037fB"] = "insert-private-key"
+        myMap["0xab83E0071A4894Ce5464378de41cd9eC8A2037fB"] = "private-key"
         val enterButton: Button = findViewById(R.id.enter_wallet_button)
         enterButton.setOnClickListener{
             val editTextPrivateKey: EditText = findViewById(R.id.private_key_input)
